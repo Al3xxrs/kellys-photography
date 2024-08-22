@@ -1,0 +1,32 @@
+.background-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/background-1.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh; /* Ensure the background covers the viewport height */
+}
+
+.masonry {
+    column-count: 1; /* Default to 1 column on very small screens */
+    column-gap: 1rem;
+}
+
+.masonry-item {
+    display: inline-block;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/* Medium screens (tablets, small laptops) */
+@media (min-width: 600px) {
+    .masonry {
+        column-count: 2; /* 2 columns on screens 600px and wider */
+    }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 900px) {
+    .masonry {
+        column-count: 3; /* 3 columns on screens 900px and wider */
+    }
+}
