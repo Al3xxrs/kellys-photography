@@ -1,6 +1,6 @@
 ### Portfolio Website React + Vite
 
-This is my portfolio website, designed to be simple and clean.
+This is a portfolio project, designed to be simple and clean.
 
 ## Tech Stack
 
@@ -19,8 +19,8 @@ To get this project up and running on your local machine:
 2. [Clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) this repository.
 
 ```bash
-git clone https://github.com/your_username/aprilia-website.git
-cd aprilia-website/
+git clone https://github.com/your_username/kellys-photography.git
+cd kellys-photography/
 ```
 
 3. install the dependencies
