@@ -1,7 +1,6 @@
-/* Hero.css */
 .typing-effect {
     display: inline-block;
-    border-right: 0.15em solid white; /* Adjust the color and width of the cursor */
+    border-right: 0.15em solid white;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 3.5s steps(40, end) 1s 1 normal both, blink-caret 0.75s step-end infinite;
@@ -26,7 +25,6 @@
     }
 }
 
-/* Hide the cursor after typing */
 .typing-effect.typing-complete {
-    border-right: none; /* Remove cursor */
+    border-right: none;
 }

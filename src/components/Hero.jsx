@@ -15,7 +15,7 @@ const Hero = () => {
         // Set a timeout to remove the cursor after typing animation completes
         const timer = setTimeout(() => {
             setTypingComplete(true);
-        }, 2660); // Match this with the duration of the typing animation
+        }, 2660);
 
         return () => clearTimeout(timer); // Cleanup on unmount
     }, []);

@@ -1,4 +1,4 @@
-### Portfolio Website React + Vite
+### Photography Portfolio Website React + Vite
 
 This is a portfolio project, designed to be simple and clean.
 
@@ -7,6 +7,8 @@ This is a portfolio project, designed to be simple and clean.
 -   [React](https://react.dev/)
 -   CSS / [tailwind css](https://tailwindcss.com/docs/guides/vite)
 -   [framer motion](https://www.framer.com/motion/introduction/)
+-   [react-icons](https://react-icons.github.io/react-icons/)
+-   [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer)
 
 ## Installation
 

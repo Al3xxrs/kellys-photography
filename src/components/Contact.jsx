@@ -6,7 +6,6 @@ const Contact = () => {
     return (
         <footer id="contact" className="bg-black bg-opacity-65 text-white py-12 px-6 md:px-20 mt-20">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start">
-                {/* Left Section */}
                 <div className="md:w-1/2 mb-8 md:mb-0">
                     <motion.h2
                         className="text-3xl font-bold mb-4"
@@ -27,7 +26,6 @@ const Contact = () => {
                     </motion.p>
                 </div>
 
-                {/* Right Section (Form) */}
                 <motion.form
                     className="md:w-1/2 space-y-4"
                     initial={{ opacity: 0, x: 50 }}

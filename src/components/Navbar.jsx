@@ -37,7 +37,7 @@ const Navbar = () => {
                         src={isScrolled || isMenuOpen ? logoLight : logoDark}
                         alt="Logo"
                         className=" h-10 md:h-16 w-auto "
-                        key={isScrolled || isMenuOpen ? "logoLight" : "logoDark"} // Adding key to force re-render
+                        key={isScrolled || isMenuOpen ? "logoLight" : "logoDark"}
                     />
                 </motion.div>
                 <nav className="hidden md:flex space-x-12">
