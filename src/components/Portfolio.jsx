@@ -15,18 +15,31 @@ import portfolio9 from "../assets/portfolio-9.png";
 import portfolio10 from "../assets/portfolio-10.png";
 import portfolio11 from "../assets/portfolio-11.png";
 
+// Import fullscreen images
+import fullscreen1 from "../assets/fullscreen-1.png";
+import fullscreen2 from "../assets/fullscreen-2.png";
+import fullscreen3 from "../assets/fullscreen-3.png";
+import fullscreen4 from "../assets/fullscreen-4.png";
+import fullscreen5 from "../assets/fullscreen-5.png";
+import fullscreen6 from "../assets/fullscreen-6.png";
+import fullscreen7 from "../assets/fullscreen-7.png";
+import fullscreen8 from "../assets/fullscreen-8.png";
+import fullscreen9 from "../assets/fullscreen-9.png";
+import fullscreen10 from "../assets/fullscreen-10.png";
+import fullscreen11 from "../assets/fullscreen-11.png";
+
 const images = [
-    portfolio1,
-    portfolio2,
-    portfolio3,
-    portfolio4,
-    portfolio5,
-    portfolio6,
-    portfolio7,
-    portfolio8,
-    portfolio9,
-    portfolio10,
-    portfolio11,
+    { preview: portfolio1, full: fullscreen1 },
+    { preview: portfolio2, full: fullscreen2 },
+    { preview: portfolio3, full: fullscreen3 },
+    { preview: portfolio4, full: fullscreen4 },
+    { preview: portfolio5, full: fullscreen5 },
+    { preview: portfolio6, full: fullscreen6 },
+    { preview: portfolio7, full: fullscreen7 },
+    { preview: portfolio8, full: fullscreen8 },
+    { preview: portfolio9, full: fullscreen9 },
+    { preview: portfolio10, full: fullscreen10 },
+    { preview: portfolio11, full: fullscreen11 },
 ];
 
 const Portfolio = () => {
@@ -52,9 +65,9 @@ const Portfolio = () => {
         }
     }, [controls, inView]);
 
-    const handleClick = (src) => {
+    const handleClick = (fullImage) => {
         if (isMobile) {
-            window.location.href = `${src.replace(".png", "-full.png")}`;
+            window.location.href = fullImage;
         }
     };
 
@@ -70,28 +83,27 @@ const Portfolio = () => {
             </motion.h2>
 
             <div className="masonry">
-                {images.map((src, index) => (
+                {images.map(({ preview, full }, index) => (
                     <motion.div
                         key={index}
                         className="masonry-item rounded-lg overflow-hidden relative group"
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={controls}
                         transition={{ duration: 1, delay: index * 0.1 }}
-                        onClick={() => handleClick(src)}
+                        onClick={() => handleClick(full)}
                     >
                         <img
-                            src={src}
+                            src={preview}
                             alt={`Portfolio ${index + 1}`}
                             className="w-full h-auto object-cover"
                             loading="lazy"
-                            srcSet={`${src}?w=400 400w, ${src}?w=800 800w, ${src}?w=1200 1200w`}
+                            srcSet={`${preview}?w=400 400w, ${preview}?w=800 800w, ${preview}?w=1200 1200w`}
                             sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
                         />
-                        {/* Overlay */}
                         {!isMobile && (
                             <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-opacity duration-500 ease-in-out flex items-center justify-center cursor-pointer">
                                 <a
-                                    href={`${src.replace(".png", "-full.png")}`}
+                                    href={full}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-white font-bold py-2 px-4 border border-white rounded"
