@@ -36,7 +36,7 @@ const Navbar = () => {
                     <img
                         src={isScrolled || isMenuOpen ? logoLight : logoDark}
                         alt="Logo"
-                        className=" h-10 md:h-16 w-auto "
+                        className=" h-11 md:h-14 w-auto "
                         key={isScrolled || isMenuOpen ? "logoLight" : "logoDark"}
                     />
                 </motion.div>
